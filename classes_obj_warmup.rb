@@ -41,17 +41,48 @@
 
 # ------ PART 2 ------ #
 # Person class... COMPLETE
-class Person
-    attr_reader :name, :age, :favorite_joke
+# class Person
+#     attr_reader :name, :age, :favorite_joke
 
-    def initialize (name, age, favorite_joke)
+#     def initialize (name, age, favorite_joke)
+#         @name = name
+#         @age = age
+#         @favorite_joke = favorite_joke
+#     end
+# end
+
+# mortimer = Person.new("Mortimer", 51, "Why did the chicken cross the road? Because he was hungry.")
+# puts mortimer.age
+# puts mortimer.name
+# puts mortimer.favorite_joke
+
+
+# ------ PART 3 ------ #
+class Human
+    attr_reader :name, :x_gene
+    def initialize (name, x_gene)
         @name = name
-        @age = age
-        @favorite_joke = favorite_joke
+        @x_gene = x_gene
     end
+
+    def spot_sentinel
+        if x_gene == false
+            puts "I am a human, go away you Sentinel!"
+        else
+            puts "Uh oh, a Sentinel.  Time to retreat back to Xavier's School for Gifted youngsters!"
+        end
+    end
+
+    def mutate!
+        @x_gene = !@x_gene
+        puts "Argggghhh... the change! O_o'"
+    end
+
 end
 
-mortimer = Person.new("Mortimer", 51, "Why did the chicken cross the road? Because he was hungry.")
-puts mortimer.age
-puts mortimer.name
-puts mortimer.favorite_joke
+fritz = Human.new("Fritz", false)
+puts fritz.name
+puts fritz.x_gene
+puts fritz.spot_sentinel
+puts fritz.mutate!
+puts fritz.spot_sentinel
