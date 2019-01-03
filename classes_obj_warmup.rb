@@ -10,7 +10,7 @@
 # puts joke.class
 # joke.tell()
 
-# Airplane Class exercise
+# Airplane Class exercise COMPLETE
 # class Airplane
 #     def climb
 #         puts "OK I'm climbing!"
@@ -22,7 +22,7 @@
 # puts plane.class
 # plane.climb()
 
-# Robot Class exercise
+# Robot Class exercise COMPLETE
 # class Robot
 #     def beep
 #         puts "BOOP!"
@@ -37,3 +37,21 @@
 
 # bumblebee.beep
 # bumblebee.destruct
+
+
+# ------ PART 2 ------ #
+# Person class... COMPLETE
+class Person
+    attr_reader :name, :age, :favorite_joke
+
+    def initialize (name, age, favorite_joke)
+        @name = name
+        @age = age
+        @favorite_joke = favorite_joke
+    end
+end
+
+mortimer = Person.new("Mortimer", 51, "Why did the chicken cross the road? Because he was hungry.")
+puts mortimer.age
+puts mortimer.name
+puts mortimer.favorite_joke
